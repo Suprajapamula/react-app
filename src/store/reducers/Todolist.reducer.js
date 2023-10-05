@@ -1,8 +1,9 @@
+import {ADDTODO} from '../actionType'
 const initailState={
     todolist:["Supraja","chinna","ambadas","sunitha","sairam"]
 }
 function todolistReducer(state=initailState,action){
-          if(action.type==="ADDTODO"){
+          if(action.type===ADDTODO){
             return {todolist:[...state.todolist,action.payload]}
           }
           return state;

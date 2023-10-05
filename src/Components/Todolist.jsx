@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import { connect } from 'react-redux';
+import {addTodo} from '../store/actions';
+
 function Todolist(props){
     var [newtodo,setNewtodo]=useState('');
     console.log(props);
@@ -7,7 +9,7 @@ function Todolist(props){
         <div className='mybox'>
             <h1>TodoList</h1>
             <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}/>
-            <button onClick={()=>{props.dispatch({type:'ADDTODO',payload:newtodo})}}>Add Todo</button>
+            <button onClick={()=>{props.dispatch(addTodo(newtodo))}}>Add Todo</button>
             <ul>{
                 props.t.todolist.map((todo)=>{
                     return <li>{todo}</li>
