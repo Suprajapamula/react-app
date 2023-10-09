@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 import Countries from './features/countries/Countries';
 import Products from './features/countries/Products';
-import CountryDetails from './features/countries/CountryDetails';
+import CountryDetails from './features/countries/CountryDetails';4
 const router = createBrowserRouter([
   {
     path: "/",
